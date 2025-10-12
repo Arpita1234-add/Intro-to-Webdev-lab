@@ -9,7 +9,7 @@ I liked figcaption
 - Was there something that you wish had been explained better?
 NA
 - Were there other exercises that might have helped you learn this week’s topic a little better?
-I was able to understand the concepts of header, table row, how to link image using href and also related to ordered and unordered list.
+I was able to understand the concepts of header, table row, how to link image using href and also related to ordered and unordered list. The basic concepts are cleared in this lab.
 ### Accessibility
 
 I used wave extension.
