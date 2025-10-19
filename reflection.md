@@ -13,6 +13,8 @@ I was able to understand the concepts of header, table row, how to link image us
 ### Accessibility
 
 I used wave extension.
+Fixes:
+The accessibility issue in the original form is due to missing labels, landmark region and unclear form structure. The fixes were replacing with proper labels linked to input fields. Also the radio button was given shared name attribute and wrapped inside fieldset. Main is added to have correct content area.
 
 ### CSS
 
