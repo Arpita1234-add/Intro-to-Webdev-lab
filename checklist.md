@@ -4,22 +4,13 @@ Prior to turning in your assignment, complete the following checklist in regards
 
 #### Accessibility Code Check
 
-<<<<<<< HEAD
-- [x] Use the Wave AIM browser extension to run an accessibility audit on your completed solutions.
+- [X] Use the Wave AIM browser extension to run an accessibility audit on your completed solutions.
 
 #### Formatted Code Check
 
-- [x] Use Prettier to properly format your HTML code.
-- [x] Use Prettier to properly format your CSS code.
-=======
-- [ ] Use the Wave AIM browser extension to run an accessibility audit on your completed solutions.
-
-#### Formatted Code Check
-
-- [ ] Use Prettier to properly format your HTML code.
-- [ ] Use Prettier to properly format your CSS code.
->>>>>>> upstream/main
-- [ ] Use Prettier to properly format your JavaScript code.
+- [X] Use Prettier to properly format your HTML code.
+- [X] Use Prettier to properly format your CSS code.
+- [X] Use Prettier to properly format your JavaScript code.
 
 #### How to update this markdown document?
 

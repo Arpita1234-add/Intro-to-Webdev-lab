@@ -18,7 +18,7 @@ The accessibility issue in the original form is due to missing labels, landmark 
 
 ### CSS
 
-Enter your reflections on this section here.
+I have found it useful specially the media queries section this is something I have learnt and dint use before.
 
 ### Flexbox
 
