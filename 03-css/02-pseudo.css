@@ -1,4 +1,19 @@
 .container {
   width: 600px;
   margin: 40px auto;
+  font-family: Georgia, serif;
+  line-height: 1.6;
+}
+
+.paragraph {
+  margin-bottom: 20px;
+}
+
+.paragraph::first-letter {
+  font-size: 3em;
+  font-weight: bold;
+  vertical-align: baseline;
+  line-height: 1;
+  color: #000;
+  margin-right: 6px;
 }

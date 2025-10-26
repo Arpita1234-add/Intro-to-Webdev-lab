@@ -1,5 +1,4 @@
 /* CSS custom properties / CSS variables */
-
 :root {
   --teal: #008080;
   --royalblue: #4169e1;
@@ -8,14 +7,62 @@
   --magenta: #8b008b;
 }
 
-/* Use attribute selectors for the first part of the exercise */
 
-li[class] {
-  color: var(--red);
+
+/* dog = magenta */
+li[class="dog"] {
+  color: var(--magenta);
 }
 
-/* Use descendant, child, and sibling selectors for the second part */
+/* cat = teal */
+li[id="cat"] {
+  color: var(--teal);
+}
 
-section li {
+/* parrot = green */
+li[class="parrot"] {
   color: var(--green);
+}
+
+/* donkey = royal blue */
+li[class="donkey"] {
+  color: var(--royalblue);
+}
+
+/* hedgehog = violet */
+li[class="hedgehog"] {
+  color: var(--violet);
+}
+
+
+li[class~="dog"][class~="cat"][class~="parrot"] {
+  color: var(--royalblue);
+}
+
+
+.list-food ol li:nth-child(1) { /* eggs */ 
+  color: var(--green);
+}
+.list-food ol li:nth-child(2) { /* flour */
+  color: var(--magenta);
+}
+.list-food ol li:nth-child(3) { /* milk */
+  color: var(--royalblue);
+}
+.list-food ol li:nth-child(4) { /* coffee */
+  color: var(--magenta);
+}
+
+.list-food small {
+  font-style: normal;
+  color: black;
+}
+
+/* Cleaning list items all green */
+.list-cleaning ol li {
+  color: var(--green);
+}
+
+section + section {
+  margin-top: 1rem;
 }
