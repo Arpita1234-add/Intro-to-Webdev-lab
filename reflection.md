@@ -22,15 +22,15 @@ I have found it useful specially the media queries section this is something I h
 
 ### Flexbox
 
-Enter your reflections on this section here.
+this was something which was new for me
 
 ### CSS Grid
 
-Enter your reflections on this section here.
+this was bit tricky for me
 
 ### Bootstrap
 
-Enter your reflections on this section here.
+this was something which i wanted to learn
 
 ### JavaScript
 
