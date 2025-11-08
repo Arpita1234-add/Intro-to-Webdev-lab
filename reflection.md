@@ -34,7 +34,7 @@ this was something which i wanted to learn
 
 ### JavaScript
 
-Enter your reflections on this section here.
+I have liked how the copy text works and simultaneouly it writes for new box. Overall a good understanding of javascript
 
 ### jQuery
 
