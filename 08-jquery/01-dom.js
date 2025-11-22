@@ -1,48 +1,34 @@
-// Exercise #1:
+// Exercise #1 (jQuery Version)
 // When the user clicks the 'copy' button, copy the user input to the output area
 
-// Option #1
-// Fetch JavaScript objects representing specific elements in the DOM
-let userInput1 = document.querySelector('#userInput1');
-let copy = document.querySelector('#copy');
-let output1 = document.querySelector('#output1');
+// Fetch DOM elements (jQuery objects)
+let $userInput1 = $('#userInput1');
+let $copyBtn = $('#copy');
+let $output1 = $('#output1');
 
-// Add an event listener on the target element
-copy.addEventListener('click', handleClick);
+// Add event listener (click)
+$copyBtn.on('click', handleClick);
 
-// Callback function to handle event
+// Callback function for click event
 function handleClick(event) {
   console.log('click event', event);
-  output1.textContent = userInput1.value;
+  $output1.text($userInput1.val());
 }
 
-// Option #2
-// document.getElementById('copy').onclick = () => {
-//   let userInput = document.getElementById('userInput1');
-//   let output = document.getElementById('output');
 
-//   output.textContent = userInput.value;
-// };
 
-// Option #3
-// document.getElementById('copy').onclick = () => {
-//   document.getElementById('output').textContent = document.getElementById(
-//     'userInput1'
-//   ).value;
-// };
-
-// Exercise #2:
+// Exercise #2 (jQuery Version)
 // When the user enters input text, copy the user input to the output area
 
-// Fetch JavaScript objects representing specific elements in the DOM
-let userInput2 = document.querySelector('#userInput2');
-let output2 = document.querySelector('#output2');
+// Fetch DOM elements (jQuery objects)
+let $userInput2 = $('#userInput2');
+let $output2 = $('#output2');
 
-// Add an event listener on the target element
-userInput2.addEventListener('input', handleInput);
+// Add event listener (input)
+$userInput2.on('input', handleInput);
 
-// Callback function to handle event
+// Callback function for input event
 function handleInput(event) {
-  console.log('click event', event);
-  output2.textContent = userInput2.value;
+  console.log('input event', event);
+  $output2.text($userInput2.val());
 }

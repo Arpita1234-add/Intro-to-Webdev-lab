@@ -38,8 +38,8 @@ I have liked how the copy text works and simultaneouly it writes for new box. Ov
 
 ### jQuery
 
-Enter your reflections on this section here.
+I learned how jQuery simplifies DOM selection, event handling and AJAX requests using shorter and more readable syntax
 
 ### Node.js
 
-Enter your reflections on this section here.
+I learned that Node.js allows JavaScript to run on the server that makes backend development fast

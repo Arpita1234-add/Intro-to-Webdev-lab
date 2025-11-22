@@ -1,52 +1,55 @@
-const url = 'https://anapioficeandfire.com/api/books/';
+const url = "https://anapioficeandfire.com/api/books/";
 
-const app = document.querySelector('#books');
-app.style.paddingLeft = 0;
-const loading = document.querySelector('#loading');
+// jQuery references to DOM elements
+let $app = $("#books");
+let $loading = $("#loading");
 
+// Helper function to append each book to the DOM
 const addBookToDOM = (item) => {
   console.log(item);
-  let element = document.createElement('div');
-  let title = document.createElement('h4');
-  let author = document.createElement('p');
-  let published = document.createElement('p');
-  let pages = document.createElement('p');
 
-  element.style.display = 'flex';
-  element.style.flexDirection = 'column';
-  element.style.alignItems = 'center';
-  element.style.marginTop = '20px';
+  // Create elements using jQuery
+  let $element = $("<div></div>");
+  let $title = $("<h4></h4>").text(item.name);
+  let $author = $("<p></p>").text(`by ${item.authors[0]}`);
+  let $published = $("<p></p>").text(item.released.substr(0, 4));
+  let $pages = $("<p></p>").text(`${item.numberOfPages} pages`);
 
-  title.textContent = item.name;
-  author.textContent = `by ${item.authors[0]}`;
-  published.textContent = item.released.substr(0, 4);
-  pages.textContent = `${item.numberOfPages} pages`;
+  // Styling 
+  $element.css({
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    marginTop: "20px",
+  });
 
-  element.append(title);
-  element.append(author);
-  element.append(published);
-  element.append(pages);
+  // Append to parent
+  $element.append($title, $author, $published, $pages);
 
-  app.append(element);
+  // Add to books container
+  $app.append($element);
 };
 
+// Fetch data using jQuery Ajax
 const fetchData = (url) => {
-  fetch(url)
-    .then((response) => response.json())
-    .then((data) => {
+  $.ajax({
+    url: url,
+    method: "GET",
+    success: function (data) {
       data.forEach((item) => {
         addBookToDOM(item);
       });
-    })
-    .catch((error) => {
-      console.log(error);
-      let li = document.createElement('li');
-      li.textContent = `An error occured. Please try again.`;
-      app.append(li);
-    })
-    .finally(() => {
-      app.removeChild(loading);
-    });
+    },
+    error: function () {
+      let $errorMsg = $("<p></p>").text("An error occurred. Please try again.");
+      $app.append($errorMsg);
+    },
+    complete: function () {
+      // Remove the loading gif
+      $loading.remove();
+    },
+  });
 };
 
+// Call the function
 fetchData(url);

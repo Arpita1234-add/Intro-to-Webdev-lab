@@ -19,25 +19,29 @@ const characters = [
   { id: 88, name: 'Brienne', house: 'Tarth' },
 ];
 
+
+//  1. mapNameFamily  returns ["Arya, of House Stark", ...]
 const mapNameFamily = (characters) => {
-  // Return an array with the name and house of each character
-  // Format: "Arya, of House Stark"
-
-  return characters;
+  return characters.map((char) => `${char.name}, of House ${char.house}`);
 };
 
+
+// 2. filterFamily  returns array of characters from a given house
 const filterFamily = (characters, house) => {
-  // Return an array with only the characters from a given house
-
-  return characters;
+  return characters.filter((char) => char.house === house);
 };
 
+
+// 3. reduceHouses count characters per house
 const reduceHouses = (characters) => {
-  // Return an object with the number of characters from each house
-
-  return characters;
+  return characters.reduce((acc, char) => {
+    acc[char.house] = (acc[char.house] || 0) + 1;
+    return acc;
+  }, {});
 };
 
+
+// ------ Testing the functions ------
 console.log(mapNameFamily(characters));
 // [
 //   'Arya, of House Stark',
